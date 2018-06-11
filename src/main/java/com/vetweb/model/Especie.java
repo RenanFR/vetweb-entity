@@ -16,6 +16,15 @@ public class Especie implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	public Especie() {
+		super();
+	}
+	
+	public Especie(String descricao) {
+		super();
+		this.descricao = descricao;
+	}
+
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long especieId;
 	
