@@ -1,9 +1,12 @@
 package com.vetweb.model;
-// @author Maria Jéssica
+//@author renan.rodrigues@metasix.com.br
+
+import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import java.io.Serializable;
+
 import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -15,15 +18,6 @@ import javax.persistence.OneToMany;
 public class Especie implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	
-	public Especie() {
-		super();
-	}
-	
-	public Especie(String descricao) {
-		super();
-		this.descricao = descricao;
-	}
 
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long especieId;
@@ -33,6 +27,15 @@ public class Especie implements Serializable {
     @JsonManagedReference
     @OneToMany(mappedBy = "especie",fetch = FetchType.EAGER)
     private Set<Raca> racas;
+    
+    public Especie() {
+    	super();
+    }
+    
+    public Especie(String descricao) {
+    	super();
+    	this.descricao = descricao;
+    }
     
     public String getDescricao() {
         return descricao;

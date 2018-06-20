@@ -1,8 +1,9 @@
 package com.vetweb.model.validators;
 // @author Maria Jéssica
 
-import com.vetweb.model.Pessoa;
 import com.vetweb.model.Proprietario;
+import com.vetweb.model.Pessoa;
+
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;

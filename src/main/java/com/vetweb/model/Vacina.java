@@ -1,7 +1,8 @@
 package com.vetweb.model;
  //@author renanrodrigues
-import java.io.Serializable;
+
 import java.math.BigDecimal;
+import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

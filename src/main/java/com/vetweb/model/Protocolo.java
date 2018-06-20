@@ -1,7 +1,8 @@
 package com.vetweb.model;
  //@author renanrodrigues
-import java.io.Serializable;
+
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 @Embeddable
 public class Protocolo implements Serializable {

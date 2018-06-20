@@ -1,9 +1,12 @@
 package com.vetweb.model;
  // @author 11151504898
+
 import java.io.Serializable;
+
 import javax.persistence.Embeddable;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+
 @Embeddable
 public class Endereco implements Serializable {
 	
@@ -23,19 +26,20 @@ public class Endereco implements Serializable {
     private int numero;
     
     private String complemento;
-
+    
     public Endereco(String rua, String bairro, String cidade, String estado, String cep, int numero, String complemento) {
-        this.rua = rua;
-        this.bairro = bairro;
-        this.cidade = cidade;
-        this.estado = estado;
-        this.cep = cep;
-        this.numero = numero;
-        this.complemento = complemento;
+    	this.rua = rua;
+    	this.bairro = bairro;
+    	this.cidade = cidade;
+    	this.estado = estado;
+    	this.cep = cep;
+    	this.numero = numero;
+    	this.complemento = complemento;
     }
-
+    
     public Endereco() {
     }
+
     
     public String getRua() {
         return rua;

@@ -1,7 +1,9 @@
 package com.vetweb.model;
- //@author renanrodrigues
-import javax.persistence.Entity;
+//@author renan.rodrigues@metasix.com.br
+
 import javax.persistence.Table;
+import javax.persistence.Entity;
+
 @Entity
 @Table(name = "colaboradores")
 public class Colaborador extends Pessoa {

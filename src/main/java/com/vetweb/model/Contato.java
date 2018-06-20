@@ -1,11 +1,14 @@
 package com.vetweb.model;
  // @author 11151504898
+
 import java.io.Serializable;
+
 import javax.persistence.Embeddable;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
 
-@Embeddable//Indica um relacionamento no banco de dados. É atributo de outra entidade
+@Embeddable
 public class Contato implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -15,16 +18,16 @@ public class Contato implements Serializable {
 	
     private String celular;
     
-    @Email//Garante que o formato de email seja respeitado. Implementado pelo Hibernate Validator
+    @Email
     private String email;
-
+    
     public Contato() {
     }
-
+    
     public Contato(String telefone, String celular, String email) {
-        this.telefone = telefone;
-        this.celular = celular;
-        this.email = email;
+    	this.telefone = telefone;
+    	this.celular = celular;
+    	this.email = email;
     }
 
     public String getTelefone() {

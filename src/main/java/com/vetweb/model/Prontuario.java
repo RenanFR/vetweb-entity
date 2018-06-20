@@ -1,7 +1,9 @@
 package com.vetweb.model;
  //@author renanrodrigues
-import java.io.Serializable;
+
 import java.util.List;
+
+import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

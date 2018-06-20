@@ -1,5 +1,5 @@
 package com.vetweb.model;
-// @author Maria Jéssica
+//@author renan.rodrigues@metasix.com.br
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -21,6 +21,17 @@ public class Clinica implements Serializable {
     private String cnpj;
     
     private String proprietario;
+    
+    public Clinica(String razaoSocial, LocalDate fundadaEm, String cnpj, String proprietario) {
+    	super();
+    	this.razaoSocial = razaoSocial;
+    	this.fundadaEm = fundadaEm;
+    	this.cnpj = cnpj;
+    	this.proprietario = proprietario;
+    }
+    
+    public Clinica() {
+    }
 
     public String getRazaoSocial() {
         return razaoSocial;
@@ -53,16 +64,5 @@ public class Clinica implements Serializable {
     public void setProprietario(String proprietario) {
         this.proprietario = proprietario;
     }
-
-	public Clinica(String razaoSocial, LocalDate fundadaEm, String cnpj, String proprietario) {
-		super();
-		this.razaoSocial = razaoSocial;
-		this.fundadaEm = fundadaEm;
-		this.cnpj = cnpj;
-		this.proprietario = proprietario;
-	}
-	
-    public Clinica() {
-	}
     
 }

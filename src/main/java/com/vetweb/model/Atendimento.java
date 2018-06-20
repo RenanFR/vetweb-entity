@@ -1,5 +1,5 @@
 package com.vetweb.model;
- //@author renanrodrigues
+//@author renan.rodrigues@metasix.com.br
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,6 +30,15 @@ public class Atendimento implements Serializable, ElementoProntuario {
     private LocalDate dataAtendimento;
     
     public boolean pago;
+
+	public Atendimento() {
+    }
+
+    public Atendimento(Long atendimentoId, TipoDeAtendimento tipoDeAtendimento, StringBuilder preenchimentoModeloAtendimento) {
+        this.atendimentoId = atendimentoId;
+        this.tipoDeAtendimento = tipoDeAtendimento;
+        this.preenchimentoModeloAtendimento = preenchimentoModeloAtendimento;
+    }    
     
     public Long getAtendimentoId() {
         return atendimentoId;
@@ -77,15 +86,6 @@ public class Atendimento implements Serializable, ElementoProntuario {
 		this.pago = pago;
 	}
 
-	public Atendimento() {
-    }
-
-    public Atendimento(Long atendimentoId, TipoDeAtendimento tipoDeAtendimento, StringBuilder preenchimentoModeloAtendimento) {
-        this.atendimentoId = atendimentoId;
-        this.tipoDeAtendimento = tipoDeAtendimento;
-        this.preenchimentoModeloAtendimento = preenchimentoModeloAtendimento;
-    }
-    
     @Override
     public String toString() {
     	return this.getTipoDeAtendimento().getNome();

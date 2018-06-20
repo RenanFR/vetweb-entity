@@ -1,11 +1,14 @@
 package com.vetweb.model;
- //@author renanrodrigues
+//@author renan.rodrigues@metasix.com.br
+
 import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Entity
 @Table(name = "documentos")
 public class Documento implements Serializable {
